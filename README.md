@@ -1,7 +1,5 @@
 # SemiTimeSeries
 
-# Project Title
-
 Describe briefly what makes your project stand out.
 
 ## Requirements
