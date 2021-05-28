@@ -34,7 +34,7 @@ Describe briefly what makes your project stand out.
 | MeanTeacher       |                        |                        |                        |              |
 | **Dataset** | Uwave                  |                        |                        |              |
 | SemiTime          | 81.46(0.60)            | 84.57(0.49)            | 86.91(0.47)            | 90.29(0.32)  |
-| MeanTeacher       | 92.28(0.51)            | 94.94(0.68)            | 96.36(0.7)             |              |
+| MeanTeacher       | **92.28** (0.51)            | **94.94**(0.68)            | **96.36**(0.7)             |              |
 | **Dataset** | Epilep                 |                        |                        |              |
 | SemiTime          | 74.86(0.42)            | 75.54(0.63)            | 77.01(0.79)            | 79.26(1.20)  |
 | MeanTeacher       |                        |                        |                        |              |
