@@ -1,69 +1,67 @@
 # Semi Time series classification
 > The main idea is to combine the MeanTeacher with the series saliency module. While improving the accuracy of the model, it can also improves the interpretability quantitatively and qualitatitvely. Compared with the above work that only improves accuracy, it may provide more insights.
 
-[Google](http://www.google.com/)
+![image](http://i2.tiimg.com/695850/76c3f37c8527973c.png)
 
 ### Requirement
 The package includes ```sklearn```, ```numpy,``` ```pytorch```..etc. If any packages are missiing, just use conda install.
 
 ### Structure
-The structure of the software is redundant. The important file is ```mainOurs.py```, which also includes some options. The important parameters are followings:
+The structure of the software is redundant. ```mainOurs.py``` includes some options. The important parameters are in followings:
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+#### option
+* `--dataset`
+    * The experiments includes six datasets. ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)) The previous papers mainly design experiments on the six datasets. Until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, compared with the previous  **SOTA**  results, there is a significant improvement, and I almostly didn't tune the parameters.
 
+* `--model_name`
+    * It includes three opinions, of course, the code mainly focuses on the our method
+        * `SupCE`: The supervised training procedure
+        * `SemiTime`: The previous  **SOTA**  baselines
+        * `SemiTeacher`: Our method ( **MeanTeacher**  +  **Series Saliency**).
 
-OS X & Linux:
+* `--label_ratio`
+    * The option is used to limit the proportion of labeled data.
+* `--Saliency`
+    * The option is to indicate whehter the use the series saliency module in the MeanTeacher training.
+* Other parameters are some detailed parameters.
 
-```sh
-sh run.sh
+#### Directory
+
+* `optim/` 
+    * Under the `optim/` directory, there are some main optimization method
+        * `generalWay.py` includes our implement method
+        * `pretrain.py` includes the baseline
+* `model/` 
+    * The mainly architecture is Temporal Convolution neural network
+* `Dataloader/`
+    * The directory is important, including some dataloaders that read the UCR time series classification data. In the implementation, the consistency loss is also randomly selected from the labeled and unlabel data.
+
+#### Usage example
+After introducing the results of previous code, some examples for running commands.
+
+```
+python mainOurs.py --model_name SemiTeacher --dataset=CricketX --gpu=2 --label_ratio 0.4
+```
+```
+python mainOurs.py --model_name SemiTime --dataset=CricketX --gpu=2 --label_ratio 0.4
+```
+```
+python mainOurs.py --model_name SupCE --dataset=CricketX --gpu=2 --label_ratio 0.4
 ```
 
-## Usage example
+### Architecture
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+The model architecture is intuitive, which migrating the commonly used mean teacher method in the semi supervised learning of time series. We combine it with the previously designed series saliency module. As shown in the Figure, we will probably know the specific implementation method. The detail implementation in code. At present, the accuracy has been significantly improved. This is a good news! On the other hand, we proves the series saliency module is helpful in semi-supervised learning.
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+The second part is to used the series saliency for interpretation in time series semi-supervised learning. I have implemented the code before, also I'll migrate from time series forecasting to time series classification. We'll provide more quantitative and qualitative analysis. The motivation is to observe how the deep models learn the information with increasing label size. This may require more domain knowledge and cherry pick some visualization. 
 
-## Development setup
+Finally, I think combine with the improved accuracy with the interpretation results in the semi-supervised learning. I think there is some important contribution in the semi-supervised learning in time series classification.
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+## Experiments results
 
-```sh
-make install
-npm test
-```
+We mainly compare the lates two papers on time series supervised learning. [Second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf) reproduces the results of [first paper](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39).
+Therefore, we will compare with their methods. The experiment results show that the series saliency is also a useful augmentation. Now the more visualization results will be added (like t-sne).
 
-## Release History
-
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
-
-## Experiment results
-
-Semi Time represent the sota results in semi supervised time series classification 
-
-– [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
 
 | Label Ratio       | 10%                           | 20%                    | 40%                   | 100%         |
 | ----------------- | ----------------------------- | ---------------------- | --------------------- | ------------ |
@@ -94,9 +92,14 @@ Semi Time represent the sota results in semi supervised time series classificati
 |                   |                               |                        |                       |              |
 
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+## Reference
+The two papers were not presented at the top-tier conference. I think the main reason is lack of further analysis.
 
-## Contributing
+[1][SEMI-SUPERVISED TIME SERIES CLASSIFICATION BY TEMPORAL RELATION PREDICTION](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf)
+
+[2][Self-Supervised Time Series Representation Learning by Inter-Intra Relational Reasoning](https://openreview.net/pdf?id=qFQTP00Q0kp)
+
+[3][Self-supervised Learning for Semi-supervised Time Series Classification](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39)
 
 
 
