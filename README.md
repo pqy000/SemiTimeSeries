@@ -8,7 +8,8 @@
 The package ```sklearn```, ```numpy,``` ```pytorch```..etc.
 
 ## Dataset
-The data composed of 6 publicly available datasets downloadable from ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)).The following are the detailed parameters of the three data sets I have completed the experiment.
+The data composed of 6 publicly available datasets downloadable from ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)), and save them under the directory `datasets/`.
+The following are the detailed parameters of the three data sets I have completed the experiment.
 
 | Dataset                | Train | Test | Dimension | Class |
 | ---------------------- | ----- | ---- | --------- | ----- |
