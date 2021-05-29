@@ -3,8 +3,8 @@
 
 ![image](http://i2.tiimg.com/695850/76c3f37c8527973c.png)
 
-### Requirement
-The package includes ```sklearn```, ```numpy,``` ```pytorch```..etc. If any packages are missiing, just use conda install.
+### Environment
+The package ```sklearn```, ```numpy,``` ```pytorch```..etc.
 
 ### Structure
 The structure of the software is redundant. ```mainOurs.py``` includes some options. The important parameters are in followings:
