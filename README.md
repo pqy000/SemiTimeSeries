@@ -1,51 +1,78 @@
-# SemiTimeSeries
+# Product Name
+> Short blurb about what your product does.
 
-Describe briefly what makes your project stand out.
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-## Requirements
+One to two paragraph statement about your product and what it does.
 
-- List of required tools for this project.
+![](header.png)
 
 ## Installation
 
-1. Steps to install your project.
-1. Include commands if possible.
+OS X & Linux:
 
-   ```sh
-   echo "Hello World"
-   ```
+```sh
+npm install my-crazy-module --save
+```
 
-## Usage
+Windows:
 
-- `incognito` - Open an incognito window with [Google](https://www.google.com/).
+```sh
+edit autoexec.bat
+```
 
-### Experiment results
-          
-| Label Ratio       | 10%                           | 20%                    | 40%                   | 100%         |
-| ----------------- | ----------------------------- | ---------------------- | --------------------- | ------------ |
-| **Dataset** | **CricketX**            |                        |                       |              |
-| SemiTime          | 44.88 (3.13)                  | 51.61 (1.22)           | 58.71 (2.78)          | 65.66 (1.58) |
-| MeanTeacher       | 39.54 (1.16)                  | 51.59 (1.98)           | 62.87 (1.69)          |              |
-| MT w/ SS          |                               |                        | **63.45** (1.28)     |              |
-|                   |                               |                        |                       |              |
-| **Dataset** | **InsectWingbeatSound** |                        |                       |              |
-| SemiTime          | 54.96  (1.61)                 | 59.01 (1.56)           | 62.38 (0.76)          | 66.57 (0.67) |
-| MeanTeacher       | **57.95** (1.64)        | **61.47** (1.58) | **64.29**(1.18) |              |
-| MT w/ SS          |                               |                        |                       |              |
-|                   |                               |                        |                       |              |
-| **Dataset** | MFPT                          |                        |                       |              |
-| SemiTime          | 64.16(0.85)                   | 69.84(0.94)            | 76.49 (0.54)          | 84.33(0.50)  |
-| MeanTeacher       |                               |                        |                       |              |
-| MT w/ SS          |                               |                        |                       |              |
-|                   |                               |                        |                       |              |
-| **Dataset** | Uwave                         |                        |                       |              |
-| SemiTime          | 81.46(0.60)                   | 84.57(0.49)            | 86.91(0.47)           | 90.29(0.32)  |
-| MeanTeacher       | **92.28** (0.51)        | **94.94**(0.68)  | **96.36**(0.7)  |              |
-| MT w/ SS          |                               |                        |                       |              |
-|                   |                               |                        |                       |              |
-| **Dataset** | Epilep                        |                        |                       |              |
-| SemiTime          | 74.86(0.42)                   | 75.54(0.63)            | 77.01(0.79)           | 79.26(1.20)  |
-| MeanTeacher       |                               |                        |                       |              |
-| MT w/ SS          |                               |                        |                       |              |
-|                   |                               |                        |                       |              |
+## Usage example
 
+A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+
+_For more examples and usage, please refer to the [Wiki][wiki]._
+
+## Development setup
+
+Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+
+```sh
+make install
+npm test
+```
+
+## Release History
+
+* 0.2.1
+    * CHANGE: Update docs (module code remains unchanged)
+* 0.2.0
+    * CHANGE: Remove `setDefaultXYZ()`
+    * ADD: Add `init()`
+* 0.1.1
+    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+* 0.1.0
+    * The first proper release
+    * CHANGE: Rename `foo()` to `bar()`
+* 0.0.1
+    * Work in progress
+
+## Meta
+
+Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+
+Distributed under the XYZ license. See ``LICENSE`` for more information.
+
+[https://github.com/yourname/github-link](https://github.com/dbader/)
+
+## Contributing
+
+1. Fork it (<https://github.com/yourname/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/yourname/yourproject/wiki
