@@ -88,7 +88,7 @@ We mainly compare the latest two papers on time series supervised learning. The 
 | MeanTeacher       | 56.33 (2.1)                   | 61.21 (2.17)           | 63.37(0.92)            | 67.53(1.98)           |
 | MT w/ SS          | **57.24** (2.27)        | **61.47** (1.91) | **64.9** (2.1)   | **68.99**(1.98) |
 |                   |                               |                        |                        |                       |
-| **Dataset** | Uwave                         |                        |                        |                       |
+| **Dataset** | **Uwave**                         |                        |                        |                       |
 | SemiTime          | 81.46(0.60)                   | 84.57(0.49)            | 86.91(0.47)            | 90.29(0.32)           |
 | MeanTeacher       | **92.28** (0.51)              | **94.94**(0.68)        | **96.36**(0.7)         |                       |
 | MT w/ SS          |                               |                        |                        |                       |
