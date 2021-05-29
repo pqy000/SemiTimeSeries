@@ -1,5 +1,6 @@
 # Semi Time series classification
-> The main idea is to combine the MeanTeacher with the series saliency module. While improving the accuracy of the model, it can also improves the interpretability quantitatively and qualitatitvely. Compared with the above work that only improves accuracy, it may provide more insights.
+> The main idea is to combine the MeanTeacher with the series saliency module. While improving the accuracy of the model, it can also enhance the interpretability quantitatively and qualitatively. Compared with the above work that only improves accuracy, it may provide more insights.
+
 
 ![image](http://i2.tiimg.com/695850/76c3f37c8527973c.png)
 
@@ -20,7 +21,7 @@ The data composed of 6 publicly available datasets downloadable from ([Download 
  ```mainOurs.py``` includes some options. The following are the important options, the python script takes along with their description:
 ### option
 * `--dataset`
-    * The experiments includes six datasets. The previous papers mainly design experiments on the six datasets. Up until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, compared with the previous  **SOTA**  results, there is a significant improvement.
+    * The experiments include six datasets. The previous papers mainly design experiments on the six datasets. Up until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, there is a significant improvement compared with the previous  **SOTA**  results.
 
 * `--model_name`
     * It includes three opinions.
@@ -31,7 +32,7 @@ The data composed of 6 publicly available datasets downloadable from ([Download 
 * `--label_ratio`
     * The option is used to limit the proportion of labeled data.
 * `--Saliency`
-    * The option is to indicate whehter the use the series saliency module in the MeanTeacher training.
+    * The option is to indicate whether using series saliency module in the MeanTeacher.
 * Other parameters are some detailed parameters.
 
 ### Directory
@@ -43,7 +44,7 @@ The data composed of 6 publicly available datasets downloadable from ([Download 
 * `model/` 
     * The mainly DL architecture is Temporal Convolution neural network
 * `Dataloader/`
-    * The directory is important, including some dataloaders that read the UCR time series classification data. In our implementation, the data used to calculate the consistency loss sample from both labeled and unlabeled data.
+    * The directory is necessary, including some data loaders that read the UCR time series classification data. The data used to calculate the consistency loss sample from both labelled and unlabeled data in our implementation.
 
 ### Usage example
 After introducing the results of previous code, some examples for running commands.
@@ -65,13 +66,13 @@ python mainOurs.py --model_name SupCE --dataset=CricketX --gpu=2 --label_ratio 0
 
 The model architecture is intuitive, which migrates the commonly used **Mean Teacher** method to the semi-supervised learning of time series. We combine it with the previously proposed **series saliency** module. As shown in the figure, we can guess the design idea of the model. The implementation details are in code. At present, the algorithm significantly improves accuracy. **This is good news!** 🎉 🎉 😄 On the other hand, we validated the series saliency module is helpful in semi-supervised learning.
 
-The second part is to use the series saliency for interpretation in time series semi-supervised learning. I have implemented the codes, and migrate from time series forecasting to time series classification. We'll provide more quantitative and qualitative analysis. The motivation is to observe how the deep models learn the information with increasing label size. The phenomenon may require more domain knowledge and cherry-pick some visualization.
+The second part is to use the series saliency for interpretation in time series semi-supervised learning. I will implement the codes, and migrate from time series forecasting to time series classification. We'll provide more quantitative and qualitative analysis. The motivation is to observe learning procedure with increasing label size. The phenomenon may require more domain knowledge and cherry-pick some visualization.
 
-Finally, I think that use of easy-to-implementation series saliency can significantly improve the prediction accuracy and interpretability, which contributes to the time series semi-supervised learning.
+Finally, I think that easy-to-implementation series saliency can significantly improve prediction accuracy and interpretability, contributing to the time series semi-supervised learning!
 
 ## Experiments results
 
-We mainly compare the latest two papers on time series supervised learning. The [second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf) reproduces the results of the [first paper](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39). Therefore, we will compare their methods. The experiment results show that the series saliency is also a useful augmentation. Now the more visualization results will be added (like t-sne).
+We mainly compare the latest two papers on time series supervised learning. The [second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf) reproduces the results of the [first paper](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39). Therefore, we will compare their methods. The experiment results show that the series saliency is also an effective augmentation. Now the more visualization results will be added (like t-sne).
 
 ---
 
