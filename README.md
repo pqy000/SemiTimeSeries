@@ -47,26 +47,44 @@ npm test
 * 0.0.1
     * Work in progress
 
-## Meta
+## Experiment results
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Semi Time represent the sota results in semi supervised time series classification 
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+– [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+
+| Label Ratio       | 10%                           | 20%                    | 40%                   | 100%         |
+| ----------------- | ----------------------------- | ---------------------- | --------------------- | ------------ |
+| **Dataset** | **CricketX**            |                        |                       |              |
+| SemiTime          | 44.88 (3.13)                  | 51.61 (1.22)           | 58.71 (2.78)          | 65.66 (1.58) |
+| MeanTeacher       | 39.54 (1.16)                  | 51.59 (1.98)           | 62.87 (1.69)          |              |
+| MT w/ SS          |                               |                        | **63.45** (1.28)     |              |
+|                   |                               |                        |                       |              |
+| **Dataset** | **InsectWingbeatSound** |                        |                       |              |
+| SemiTime          | 54.96  (1.61)                 | 59.01 (1.56)           | 62.38 (0.76)          | 66.57 (0.67) |
+| MeanTeacher       | **57.95** (1.64)        | **61.47** (1.58) | **64.29**(1.18) |              |
+| MT w/ SS          |                               |                        |                       |              |
+|                   |                               |                        |                       |              |
+| **Dataset** | MFPT                          |                        |                       |              |
+| SemiTime          | 64.16(0.85)                   | 69.84(0.94)            | 76.49 (0.54)          | 84.33(0.50)  |
+| MeanTeacher       |                               |                        |                       |              |
+| MT w/ SS          |                               |                        |                       |              |
+|                   |                               |                        |                       |              |
+| **Dataset** | Uwave                         |                        |                       |              |
+| SemiTime          | 81.46(0.60)                   | 84.57(0.49)            | 86.91(0.47)           | 90.29(0.32)  |
+| MeanTeacher       | **92.28** (0.51)        | **94.94**(0.68)  | **96.36**(0.7)  |              |
+| MT w/ SS          |                               |                        |                       |              |
+|                   |                               |                        |                       |              |
+| **Dataset** | Epilep                        |                        |                       |              |
+| SemiTime          | 74.86(0.42)                   | 75.54(0.63)            | 77.01(0.79)           | 79.26(1.20)  |
+| MeanTeacher       |                               |                        |                       |              |
+| MT w/ SS          |                               |                        |                       |              |
+|                   |                               |                        |                       |              |
+
 
 [https://github.com/yourname/github-link](https://github.com/dbader/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+
