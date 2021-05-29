@@ -71,9 +71,7 @@ Finally, I think that use of easy-to-implementation series saliency can signific
 
 ## Experiments results
 
-We mainly compare the lates two papers on time series supervised learning. [Second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf) reproduces the results of [first paper](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39).
-Therefore, we will compare with their methods. The experiment results show that the series saliency is also a useful augmentation. Now the more visualization results will be added (like t-sne).
-
+We mainly compare the latest two papers on time series supervised learning. The [second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf) reproduces the results of the [first paper](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39). Therefore, we will compare their methods. The experiment results show that the series saliency is also a useful augmentation. Now the more visualization results will be added (like t-sne).
 
 ---
 
@@ -109,7 +107,7 @@ Therefore, we will compare with their methods. The experiment results show that 
 
 
 ## Reference
-The two papers were not presented at the top-tier conference. I think the main reason is lack of further analysis.
+The two papers were not presented at the top-tier conference. I think the main reason is the lack of further analysis for semi-supervised learning.
 
 [1][SEMI-SUPERVISED TIME SERIES CLASSIFICATION BY TEMPORAL RELATION PREDICTION](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf)
 
