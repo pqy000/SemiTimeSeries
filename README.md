@@ -19,7 +19,7 @@ Describe briefly what makes your project stand out.
 
 - `incognito` - Open an incognito window with [Google](https://www.google.com/).
 
-### experiment results
+### Experiment results
           
 | Label Ratio       | 10%                           | 20%                    | 40%                   | 100%         |
 | ----------------- | ----------------------------- | ---------------------- | --------------------- | ------------ |
