@@ -7,7 +7,7 @@
 The package ```sklearn```, ```numpy,``` ```pytorch```..etc.
 
 ## Dataset
-The data is composed of 3 publicly available datasets downloadable from ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)).
+The data composed of 6 publicly available datasets downloadable from ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)).The following are the detailed parameters of the three data sets I have completed the experiment.
 
 | Dataset                | Train | Test | Dimension | Class |
 | ---------------------- | ----- | ---- | --------- | ----- |
@@ -17,13 +17,13 @@ The data is composed of 3 publicly available datasets downloadable from ([Downlo
 
 
 ## Structure
- ```mainOurs.py``` includes some options. The following are the important options hat the python script takes along with their description:
+ ```mainOurs.py``` includes some options. The following are the important options, the python script takes along with their description:
 ### option
 * `--dataset`
-    * The experiments includes six datasets. The previous papers mainly design experiments on the six datasets. Up until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, compared with the previous  **SOTA**  results, there is a significant improvement, and I almostly didn't tune the parameters.
+    * The experiments includes six datasets. The previous papers mainly design experiments on the six datasets. Up until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, compared with the previous  **SOTA**  results, there is a significant improvement.
 
 * `--model_name`
-    * It includes three opinions, of course, the code mainly focuses on the our method
+    * It includes three opinions.
         * `SupCE`: The supervised training procedure
         * `SemiTime`: The previous  **SOTA**  baselines
         * `SemiTeacher`: Our method ( **MeanTeacher**  +  **Series Saliency**).
@@ -37,34 +37,37 @@ The data is composed of 3 publicly available datasets downloadable from ([Downlo
 ### Directory
 
 * `optim/` 
-    * Under the `optim/` directory, there are some main optimization method
+    * Under the `optim/` directory, there are several semi supervised learning method.
         * `generalWay.py` includes our implement method
         * `pretrain.py` includes the baseline
 * `model/` 
-    * The mainly architecture is Temporal Convolution neural network
+    * The mainly DL architecture is Temporal Convolution neural network
 * `Dataloader/`
-    * The directory is important, including some dataloaders that read the UCR time series classification data. In the implementation, the consistency loss is also randomly selected from the labeled and unlabel data.
+    * The directory is important, including some dataloaders that read the UCR time series classification data. In our implementation, the data used to calculate the consistency loss sample from both labeled and unlabeled data.
 
 ### Usage example
 After introducing the results of previous code, some examples for running commands.
 
 ```
+## MeanTeacher
 python mainOurs.py --model_name SemiTeacher --dataset=CricketX --gpu=2 --label_ratio 0.4
 ```
 ```
+## Semi time Method
 python mainOurs.py --model_name SemiTime --dataset=CricketX --gpu=2 --label_ratio 0.4
 ```
 ```
+## Supervised method
 python mainOurs.py --model_name SupCE --dataset=CricketX --gpu=2 --label_ratio 0.4
 ```
 
 ## Architecture
 
-The model architecture is intuitive, which migrating the commonly used mean teacher method in the semi supervised learning of time series. We combine it with the previously designed series saliency module. As shown in the Figure, we will probably know the specific implementation method. The detail implementation in code. At present, the accuracy has been significantly improved. This is a good news! On the other hand, we proves the series saliency module is helpful in semi-supervised learning.
+The model architecture is intuitive, which migrates the commonly used **Mean Teacher** method to the semi-supervised learning of time series. We combine it with the previously proposed **series saliency** module. As shown in the figure, we can guess the design idea of the model. The implementation details are in code. At present, the algorithm significantly improves accuracy. **This is good news!** 🎉 🎉 😄 On the other hand, we validated the series saliency module is helpful in semi-supervised learning.
 
-The second part is to used the series saliency for interpretation in time series semi-supervised learning. I have implemented the code before, also I'll migrate from time series forecasting to time series classification. We'll provide more quantitative and qualitative analysis. The motivation is to observe how the deep models learn the information with increasing label size. This may require more domain knowledge and cherry pick some visualization. 
+The second part is to use the series saliency for interpretation in time series semi-supervised learning. I have implemented the codes, and migrate from time series forecasting to time series classification. We'll provide more quantitative and qualitative analysis. The motivation is to observe how the deep models learn the information with increasing label size. The phenomenon may require more domain knowledge and cherry-pick some visualization.
 
-Finally, I think combine with the improved accuracy with the interpretation results in the semi-supervised learning. I think there is some important contribution in the semi-supervised learning in time series classification.
+Finally, I think that use of easy-to-implementation series saliency can significantly improve the prediction accuracy and interpretability, which contributes to the time series semi-supervised learning.
 
 ## Experiments results
 
