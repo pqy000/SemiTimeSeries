@@ -1,4 +1,4 @@
-# Product Name
+# Semi Time series classification
 > Short blurb about what your product does.
 
 [![NPM Version][npm-image]][npm-url]
@@ -14,13 +14,7 @@ One to two paragraph statement about your product and what it does.
 OS X & Linux:
 
 ```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
+sh run.sh
 ```
 
 ## Usage example
