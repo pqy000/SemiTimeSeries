@@ -3,15 +3,24 @@
 
 ![image](http://i2.tiimg.com/695850/76c3f37c8527973c.png)
 
-### Environment
+## Environment
 The package ```sklearn```, ```numpy,``` ```pytorch```..etc.
 
-### Structure
-The structure of the software is redundant. ```mainOurs.py``` includes some options. The important parameters are in followings:
+## Dataset
+The data is composed of 3 publicly available datasets downloadable from ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)).
 
-#### option
+| Dataset                | Train | Test | Dimension | Class |
+| ---------------------- | ----- | ---- | --------- | ----- |
+| UWaveGestureLibraryAll | 2688  | 894  | 945       | 8     |
+| CricketX               | 458   | 156  | 300       | 12    |
+| InsectWingbeatSound    | 1320  | 440  | 256       | 11    |
+
+
+## Structure
+ ```mainOurs.py``` includes some options. The following are the important options hat the python script takes along with their description:
+### option
 * `--dataset`
-    * The experiments includes six datasets. ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)) The previous papers mainly design experiments on the six datasets. Until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, compared with the previous  **SOTA**  results, there is a significant improvement, and I almostly didn't tune the parameters.
+    * The experiments includes six datasets. The previous papers mainly design experiments on the six datasets. Up until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, compared with the previous  **SOTA**  results, there is a significant improvement, and I almostly didn't tune the parameters.
 
 * `--model_name`
     * It includes three opinions, of course, the code mainly focuses on the our method
@@ -25,7 +34,7 @@ The structure of the software is redundant. ```mainOurs.py``` includes some opti
     * The option is to indicate whehter the use the series saliency module in the MeanTeacher training.
 * Other parameters are some detailed parameters.
 
-#### Directory
+### Directory
 
 * `optim/` 
     * Under the `optim/` directory, there are some main optimization method
@@ -36,7 +45,7 @@ The structure of the software is redundant. ```mainOurs.py``` includes some opti
 * `Dataloader/`
     * The directory is important, including some dataloaders that read the UCR time series classification data. In the implementation, the consistency loss is also randomly selected from the labeled and unlabel data.
 
-#### Usage example
+### Usage example
 After introducing the results of previous code, some examples for running commands.
 
 ```
@@ -49,7 +58,7 @@ python mainOurs.py --model_name SemiTime --dataset=CricketX --gpu=2 --label_rati
 python mainOurs.py --model_name SupCE --dataset=CricketX --gpu=2 --label_ratio 0.4
 ```
 
-### Architecture
+## Architecture
 
 The model architecture is intuitive, which migrating the commonly used mean teacher method in the semi supervised learning of time series. We combine it with the previously designed series saliency module. As shown in the Figure, we will probably know the specific implementation method. The detail implementation in code. At present, the accuracy has been significantly improved. This is a good news! On the other hand, we proves the series saliency module is helpful in semi-supervised learning.
 
