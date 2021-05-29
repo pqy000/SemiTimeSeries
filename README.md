@@ -1,9 +1,7 @@
 # Semi Time series classification
-> Short blurb about what your product does.
+> The main idea is to combine the MeanTeacher with the series saliency module. While improving the accuracy of the model, it can also improves the interpretability quantitatively and qualitatitvely. Compared with the above work that only improves accuracy, it may provide more insights.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+[Google](http://www.google.com/)
 
 One to two paragraph statement about your product and what it does.
 
