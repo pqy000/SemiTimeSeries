@@ -90,7 +90,7 @@ We mainly compare the latest two papers on time series supervised learning. The 
 |                   |                               |                        |                        |                       |
 | **Dataset** | Uwave                         |                        |                        |                       |
 | SemiTime          | 81.46(0.60)                   | 84.57(0.49)            | 86.91(0.47)            | 90.29(0.32)           |
-| MeanTeacher       | **92.28** (0.51)        | **94.94**(0.68)  | **96.36**(0.7)   |                       |
+| MeanTeacher       | **92.28** (0.51)              | **94.94**(0.68)        | **96.36**(0.7)         |                       |
 | MT w/ SS          |                               |                        |                        |                       |
 |                   |                               |                        |                        |                       |
 | **Dataset** | MFPT                          |                        |                        |                       |
