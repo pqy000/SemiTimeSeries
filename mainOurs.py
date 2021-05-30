@@ -75,8 +75,8 @@ if __name__ == "__main__":
 
     exp = 'exp-cls'
 
-    Seeds = [0]
-    Runs = range(0, 1, 1)
+    Seeds = [0,]
+    Runs = range(0, 21, 1)
 
     aug1 = ['jitter','cutout']
     aug2 = ['G0']
