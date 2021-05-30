@@ -101,18 +101,9 @@ class MultiUCR2018_Forecast(data.Dataset):
     def __getitem__(self, index):
         # print("### {}".format(index))
         img, target = self.data[index], self.targets[index]
-        # if self.transform is not None:
-        #     for _ in range(self.K):
-        #         img_trans_1 = self.transform(img.copy())
-        #         img_trans_2 = self.transform(img.copy())
-        #
-        #         img_list0.extend(self.totensor_transform(img_trans_1))
-        #         img_list1.extend(self.totensor_transform(img_trans_2))
-
-        img1 = self.transform(img.copy())
-        img2 = self.transform(img.copy())
+        img1 = self.totensor_transform(self.transform(img.copy()))
+        img2 = self.totensor_transform(self.transform(img.copy()))
         return img1, img2, target
-        #return img1, img2
 
     def __len__(self):
         return self.data.shape[0]
