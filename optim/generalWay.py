@@ -62,7 +62,7 @@ def train_SemiMean(x_train, y_train, x_val, y_val, x_test, y_test, opt):
     test_set = UCR2018(data=x_test, targets=y_test, transform=tensor_transform)
     train_set = MultiUCR2018_Forecast(data=x_train, targets=y_train, K=K,
                                       transform=train_transform,
-                                      totensor_transform=1)
+                                      totensor_transform=tensor_transform)
 
     #######################################
     #########Separate labeled data#########
