@@ -68,7 +68,7 @@ python mainOurs.py --model_name SupCE --dataset=CricketX --gpu=2 --label_ratio 0
 
 ## Architecture
 
-The model architecture is intuitive, which migrates the commonly used **Mean Teacher** method to the semi-supervised learning of time series. We combine it with the previously proposed **series saliency** module. As shown in the figure, we can guess the design idea of the model. The implementation details are in code. At present, the algorithm significantly improves accuracy. **This is good news!** 🎉 🎉 😄 On the other hand, we validated the series saliency module is helpful in semi-supervised learning.
+The model architecture is intuitive, which migrates the commonly used **Mean Teacher** method to the semi-supervised learning of time series. We combine it with the previously proposed **series saliency** module. As shown in the figure, we can guess the design idea of the model. The implementation details are in code. At present, the algorithm significantly improves accuracy.  On the other hand, we validated the series saliency module is helpful in semi-supervised learning. **This is good news!** 🎉 🎉 😄
 
 The second part is to use the series saliency for interpretation in time series semi-supervised learning. I will implement the codes, and migrate from time series forecasting to time series classification. We'll provide more quantitative and qualitative analysis. The motivation is to observe learning procedure with increasing label size. The phenomenon may require more domain knowledge and cherry-pick some visualization.
 
