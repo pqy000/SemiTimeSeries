@@ -5,7 +5,7 @@
 ![image](http://i2.tiimg.com/695850/76c3f37c8527973c.png)
 
 ## Environment
-The package ```sklearn```, ```numpy,``` ```pytorch```..etc.
+The package ```sklearn```, ```numpy,``` ```pytorch``` `torchgeometry`..etc.
 
 ## Dataset
 The data composed of 6 publicly available datasets downloadable from ([Download link](https://cloud.tsinghua.edu.cn/d/b5e6a34ec6f74eb2a3bc/)), and save them under the directory `datasets/`.
