@@ -73,7 +73,7 @@ Finally, I think that easy-to-implementation series saliency can significantly i
 
 ## Experiments results
 
-We mainly compare the latest two papers on time series supervised learning. The [second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf) reproduces the results of the [first paper](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39). Therefore, we will compare their methods. The experiment results show that the series saliency is also an effective augmentation. Now the more visualization results will be added (like t-sne).
+We mainly compare the latest two papers on time series supervised learning. The [second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf) reproduces the results of the [first paper](https://link.springer.com/chapter/10.1007/978-3-030-47426-3_39). There are some other baseline methods are implemented in [second paper](https://haoyfan.github.io/papers/SemiTime_ICASSP2021.pdf).(like Pi model or pseudo label). I only put the strongest baseline in the table. Therefore, we will compare their methods. The experiment results show that the series saliency is also an effective augmentation. Now the more visualization results will be added (like t-sne). 
 
 ---
 
