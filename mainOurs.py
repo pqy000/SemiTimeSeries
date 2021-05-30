@@ -4,6 +4,7 @@ import argparse
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 import torch
+from optim.pretrain import *
 from optim.generalWay import *
 from optim.train import supervised_train
 from datetime import datetime
@@ -12,7 +13,7 @@ def parse_option():
     parser = argparse.ArgumentParser('argument for training')
     parser.add_argument('--save_freq', type=int, default=200,
                         help='save frequency')
-    parser.add_argument('--batch_size', type=int, default=256,
+    parser.add_argument('--batch_size', type=int, default=128,
                         help='batch_size')
     parser.add_argument('--K', type=int, default=4, help='Number of augmentation for each sample')
     parser.add_argument('--alpha', type=float, default=0.5, help='Past-future split point')
@@ -51,7 +52,7 @@ def parse_option():
     # method
     parser.add_argument('--backbone', type=str, default='SimConv4')
     parser.add_argument('--model_name', type=str, default='SemiTeacher',
-                        choices=['SupCE', 'SemiTime'], help='choose method')
+                        choices=['SupCE', 'SemiTime','SemiTeacher'], help='choose method')
     parser.add_argument('--label_ratio', type=float, default=0.4, help='label ratio')
     parser.add_argument('--usp_weight', type=float, default=0.3, help='usp weight')
     parser.add_argument('--ema_decay', type=float, default=0.95, help='usp weight')
@@ -74,7 +75,7 @@ if __name__ == "__main__":
 
     exp = 'exp-cls'
 
-    Seeds = [0,1]
+    Seeds = [0]
     Runs = range(0, 1, 1)
 
     aug1 = ['jitter','cutout']
