@@ -31,7 +31,7 @@ The following are the detailed parameters of the three data sets I have complete
     * It includes three opinions.
         * `SupCE`: The supervised training procedure
         * `SemiTime`: The previous  **SOTA**  baselines
-        * `SemiTeacher`: Our method ( **VT2**  +  **Series Saliency**).
+        * `VT2`: Our method ( **VT2**  +  **Series Saliency**).
 
 * `--label_ratio`
     * The option is used to limit the proportion of labeled data.
@@ -55,7 +55,7 @@ After introducing the results of previous code, some examples for running comman
 
 ```
 ## MeanTeacher
-python mainOurs.py --model_name SemiTeacher --dataset=CricketX --gpu=2 --label_ratio 0.4
+python mainOurs.py --model_name VT2 --dataset=CricketX --gpu=2 --label_ratio 0.4
 ```
 ```
 ## Semi time Method
