@@ -25,7 +25,7 @@ The following are the detailed parameters of the three data sets I have complete
  ```mainOurs.py``` includes some options. The following are the important options, the python script takes along with their description:
 ### option
 * `--dataset`
-    * The experiments include six datasets. The previous papers mainly design experiments on the six datasets. Up until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, there is a significant improvement compared with the previous  **SOTA**  results.
+    * The experiments include 16 datasets. The previous papers mainly design experiments on the 6 datasets. Up until now, for each dataset, I ran for 5 times (random seed 0,1,2) and recorded the mean and variance. As shown in the experiments, there is a significant improvement compared with the previous  **SOTA**  results.
 
 * `--model_name`
     * It includes three opinions.
